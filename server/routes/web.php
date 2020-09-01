@@ -14,9 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
+Route::resource('Items', 'ItemController');
 
 Auth::routes();
 
@@ -24,7 +25,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('auth/register', 'Auth\RegisterController@showRegistrationForm');
-Route::post('auth/register', 'Auth\RegisterController@register');
+Route::get('auth/logout', 'Auth\AuthController@logout');
