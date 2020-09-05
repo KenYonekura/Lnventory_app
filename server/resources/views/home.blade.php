@@ -20,5 +20,5 @@
         </div>
     </div>
 </div>
-<button type="button" class="btn btn-success">管理票一覧へ</button>
+<button type="button" class="btn btn-success" onclick="location.href='/items'">管理票一覧へ</button>
 @endsection

@@ -25,3 +25,4 @@
 <p>
     <img src="/storage/image/{{ $item->image }}">
 </p>
+<a href="/items/{{ $item->id }}/edit">編集する</a>

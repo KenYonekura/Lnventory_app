@@ -15,6 +15,12 @@ class ItemController extends Controller
         return view('Items.show', ['item' => $item]);
     }
 
+    public function edit($id)
+    {
+        $item = Item::find($id);
+        return view('Items.edit',['item => $item']);
+    }
+
     // indexページへ移動
     public function index()
     {
