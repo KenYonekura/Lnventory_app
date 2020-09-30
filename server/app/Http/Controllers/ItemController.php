@@ -18,7 +18,19 @@ class ItemController extends Controller
     public function edit($id)
     {
         $item = Item::find($id);
-        return view('Items.edit',['item => $item']);
+        return view('Items.edit', ['item => $item']);
+    }
+
+    public function delete($id)
+    {
+        $item = Item::find($id);
+        return view('Items.delete', ['item' => $item]);
+    }
+    public function destroy($id)
+    {
+        $item = Item::find($id);
+        $item->delete();
+        return redirect('/items');
     }
 
     // indexページへ移動

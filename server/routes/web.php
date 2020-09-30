@@ -26,3 +26,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('auth/logout', 'Auth\AuthController@logout');
+
+Route::get('items/{item}/delete', 'ItemController@delete');
