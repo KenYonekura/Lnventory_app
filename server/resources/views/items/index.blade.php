@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <h1>出品者一覧</h1>
+    <h1>資材一覧表</h1>
     <ul>
         @foreach($items as $item)
         <li><a href="/items/{{ $item->id }}">{{ $item->name }}</a></li>
