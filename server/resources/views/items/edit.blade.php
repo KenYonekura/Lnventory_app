@@ -13,14 +13,12 @@
         <!--更新先はitemsのidにしないと増える php artisan route:listで確認①-->
         <form action="/items/{{ $item->id }}" method="post" enctype="multipart/form-data">
             @csrf
-
             <!-- resourceの場合PUTを指定してあげないとエラーが起きる php artisan route:listで確認② -->
             @method('PUT')
             <!-- idはそのまま -->
             <input type="hidden" name="id" value="{{ $item->id }}">
             <p>
                 <b>品名：{{ $item->name }}</b></br>
-                <input type=" text" name="name" value="{{ $item->name }}">
             </p>
             <p>
                 <b>管理ナンバー：{{ $item->num }}</b>
@@ -35,10 +33,12 @@
                 <b>規格：{{ $item->standard }}</b>
             </p>
             <p>
-                <b>数量：{{ $item->quantity }}</b>
+                <b>数量：{{ $item->quantity }}</b><br>
+                <input type=" text" name="quantity" value="{{ $item->quantity }}">
             </p>
             <p>
-                <b>備考：{{ $item->remark }}</b>
+                <b>備考：{{ $item->remark }}</b><br>
+                <input type=" text" name="remark" value="{{ $item->remark }}">
             </p>
             <p>
                 <b>検収金額：{{ $item->acceptance }}</b>
