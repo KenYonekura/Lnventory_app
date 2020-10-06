@@ -8,12 +8,13 @@
 </head>
 
 <body>
-    <h1>資材一覧表</h1>
+    <h1>台帳管理一覧</h1>
     <ul>
         @foreach($items as $item)
         <li><a href="/items/{{ $item->id }}">{{ $item->name }}</a></li>
         @endforeach
     </ul>
+
 </body>
 
 </html>

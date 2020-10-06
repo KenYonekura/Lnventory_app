@@ -20,5 +20,6 @@
         </div>
     </div>
 </div>
-<button type="button" class="btn btn-success" onclick="location.href='/items'">管理票一覧へ</button>
+<button type="button" class="btn btn-success" onclick="location.href='/items'">管理票一覧</button>
+<button type="button" class="btn btn-success" onclick="location.href='/items/create'">台帳登録</button>
 @endsection
