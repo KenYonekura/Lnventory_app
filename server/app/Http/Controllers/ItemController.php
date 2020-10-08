@@ -19,6 +19,23 @@ class ItemController extends Controller
         $item = Item::find($id);
         return view('Items.edit', ['item' => $item]);
     }
+
+    public function update(Request $request, $id)
+    {
+        // idを探して持ってくる以外はstoreと同じ
+        $item = Item::find($id);
+
+        // 値の用意
+        $item->quantity = $request->quantity;
+        $item->remark = $request->remark;
+
+        $item->timestamps = false;
+        // 保存
+        $item->save();
+        // 登録したらインデックスに戻る
+        return redirect('/items');
+    }
+
     // 削除ページへ移動
     public function delete($id)
     {

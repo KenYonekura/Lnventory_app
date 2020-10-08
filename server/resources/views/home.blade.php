@@ -20,6 +20,12 @@
         </div>
     </div>
 </div>
-<button type="button" class="btn btn-success" onclick="location.href='/items'">管理票一覧</button>
-<button type="button" class="btn btn-success" onclick="location.href='/items/create'">台帳登録</button>
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+            <button type="button" class="btn btn-success" onclick="location.href='/items'">管理票一覧</button>
+            <button type="button" class="btn btn-primary" onclick="location.href='/items/create'">台帳登録</button>
+        </div>
+    </div>
+</div>
 @endsection
