@@ -23,6 +23,7 @@ class ItemController extends Controller
     public function update(Request $request, $id)
     {
         // idを探して持ってくる以外はstoreと同じ
+        
         $item = Item::find($id);
 
         // 値の用意
